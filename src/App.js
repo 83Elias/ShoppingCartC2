@@ -1,8 +1,8 @@
 import "./App.css";
 import { List } from "./Components/List";
 import { Header } from "./Components/Header";
-import { Item } from "./Components/Item";
 import { useShoppingCart } from "./Hooks/useShoppingCart";
+import { useProductStock } from "./Hooks/useProductStock";
 
 // El componente App es el padre de:
 // - Cabecera
@@ -14,10 +14,17 @@ import { useShoppingCart } from "./Hooks/useShoppingCart";
 function App() {
   const { counter, handlerOnClickBuy, handlerReset } = useShoppingCart();
 
+
   return (
     <div className="Apps">
-      <Header cart={counter}/>
-      <List handlers={{handlerOnClickBuy,handlerReset}} />
+      <Header cart={counter} />
+      <List
+        handlers={{
+          handlerOnClickBuy,
+          handlerReset,
+          useProductStock
+        }}
+      />
     </div>
   );
 }

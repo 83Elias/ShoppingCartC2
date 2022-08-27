@@ -8,12 +8,12 @@ import { Item } from "./Item.js";
 // MÉTODOS: Listado no requiere de métodos.
 // PROPS: Listado recibe el método para aumentar el estado de App y se lo pasa a cada uno de sus hijos.
 
-export const List = ({props}) => {
-    console.log(props);
+export const List = ({ handlers }) => {
+
   return (
     <div>
       {ProductData.map((item) => {
-        return <Item key={item.id} {...item} />
+        return <Item key={item.id} {...item} {...handlers}/>;
       })}
     </div>
   );

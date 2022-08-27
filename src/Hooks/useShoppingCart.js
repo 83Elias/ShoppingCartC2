@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-export const useShoppingCart = (initialValue = 3) => {
+export const useShoppingCart = (initialValue = 0) => {
   const [counter, setCounter] = useState(initialValue);
 
-  const handlerOnClickBuy = (value = 1) => {
-    setCounter(counter + value);
+  const handlerOnClickBuy = (stockState) => {
+    if (stockState > 0) {
+      setCounter(counter + 1);
+    }
   };
 
   const handlerReset = () => {
