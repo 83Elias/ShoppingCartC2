@@ -1,6 +1,6 @@
 import React from "react";
-import ProductData from "../Utils/data.json";
-import { Item } from "./Item.js";
+import ProductData from "../../Utils/data.json";
+import { Item } from "../Item/Item.js";
 // Debemos importar el listado de objetos del archivo JSON para usarlos como array a la hora de crear cada Item.
 // El componente Listado es el padre de:
 // - varios Item
@@ -11,10 +11,10 @@ import { Item } from "./Item.js";
 export const List = ({ handlers }) => {
 
   return (
-    <div>
+    <main>
       {ProductData.map((item) => {
         return <Item key={item.id} {...item} {...handlers}/>;
       })}
-    </div>
+    </main>
   );
 };

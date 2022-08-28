@@ -1,6 +1,7 @@
 import "./App.css";
-import { List } from "./Components/List";
-import { Header } from "./Components/Header";
+import React from "react";
+import { List } from "./Components/List/List";
+import { Header } from "./Components/Header/Header";
 import { useShoppingCart } from "./Hooks/useShoppingCart";
 import { useProductStock } from "./Hooks/useProductStock";
 
@@ -14,15 +15,14 @@ import { useProductStock } from "./Hooks/useProductStock";
 function App() {
   const { counter, handlerOnClickBuy, handlerReset } = useShoppingCart();
 
-
   return (
-    <div className="Apps">
+    <div className="App">
       <Header cart={counter} />
       <List
         handlers={{
           handlerOnClickBuy,
           handlerReset,
-          useProductStock
+          useProductStock,
         }}
       />
     </div>
