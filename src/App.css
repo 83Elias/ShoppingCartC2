@@ -82,3 +82,54 @@ main > div {
   width: 50vmin;
   object-fit: cover;
 }
+
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .product-img img{
+   
+    width: 25vmin;
+  
+  }
+
+  main {
+
+    justify-content: space-around;
+  }
+
+  .background-price {
+
+    width: 33vmin;
+    height: 8vmin;
+    border-radius: 15px;
+    margin: 1rem 0.5rem;
+    padding: 0 1rem;
+  }
+  
+}
+
+@media (min-width: 60rem){
+  main {
+   
+   justify-content: space-around;
+  }
+
+  .product-img img{
+
+    width: 30vmin;
+  
+  }
+
+  .item {
+    width: 370px;
+  }
+
+  .background-price {
+    width: 33vmin;
+    height: 8vmin;
+    background-color: #ff8a00;
+    border-radius: 15px;
+    margin: 1rem 0.5rem;
+    padding: 0 1rem;
+  }
+  
+}
